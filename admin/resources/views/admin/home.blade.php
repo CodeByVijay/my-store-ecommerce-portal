@@ -15,7 +15,7 @@
                         </div>
                     </div>
                     <div class="widget-data">
-                        <div class="h4 mb-0">{{ $total_leads }}</div>
+                        <div class="h4 mb-0">100</div>
                         <div class="weight-600 font-14">All Leads</div>
                     </div>
                 </div>
@@ -30,7 +30,7 @@
                         </div>
                     </div>
                     <div class="widget-data">
-                        <div class="h4 mb-0">{{ $pending_leads }}</div>
+                        <div class="h4 mb-0">100</div>
                         <div class="weight-600 font-14">Total Pending Leads</div>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
                         </div>
                     </div>
                     <div class="widget-data">
-                        <div class="h4 mb-0">{{ $progress_leads }}</div>
+                        <div class="h4 mb-0">100</div>
                         <div class="weight-600 font-14">Total In Progress Leads</div>
                     </div>
                 </div>
@@ -60,7 +60,7 @@
                         </div>
                     </div>
                     <div class="widget-data">
-                        <div class="h4 mb-0">{{ $completed_leads }}</div>
+                        <div class="h4 mb-0">100</div>
                         <div class="weight-600 font-14">Total Completed Leads</div>
                     </div>
                 </div>

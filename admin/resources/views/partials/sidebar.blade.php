@@ -88,7 +88,7 @@
 
 <div class="left-side-bar">
     <div class="brand-logo">
-        <a href="{{ route('admin.home') }}">
+        <a href="#">
             <img src="{{ asset('admin/vendors/images/deskapp-logo.svg') }}" alt="" class="dark-logo">
             <img src="{{ asset('admin/vendors/images/deskapp-logo-white.svg') }}" alt="" class="light-logo">
         </a>
@@ -98,29 +98,29 @@
     </div>
     <div class="menu-block customscroll">
         <div class="sidebar-menu">
-            @if (auth()->user()->is_admin == 1)
-                <ul id="accordion-menu">
+
+            <ul id="accordion-menu">
                     <li>
                         <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                        <a href="{{ route('admin.home') }}"
+                        <a href="#"
                             class="dropdown-toggle no-arrow {{ request()->is('admin/dashboard') ? 'active' : '' }}">
                             <span class="micon dw dw-house-1"></span><span class="mtext">Home</span>
                         </a>
                     </li>
 
-                    <li class="dropdown {{ request()->is('admin/valuation*') ? 'show' : '' }}">
+                    <li class="dropdown {{ request()->is('admin/category*') ? 'show' : '' }}">
                         <a href="javascript:void(0);"
-                            class="dropdown-toggle {{ request()->is('admin/valuation*') ? 'active' : '' }}">
-                            <span class="micon dw dw-remove"></span><span class="mtext">Valuations/Leads</span>
+                            class="dropdown-toggle {{ request()->is('admin/category*') ? 'active' : '' }}">
+                            <span class="micon dw dw-remove"></span><span class="mtext">Category Module</span>
                         </a>
                         <ul class="submenu"
-                            style="display: {{ request()->is('admin/valuation*') ? 'block' : 'none' }}">
-                            <li><a href="{{ route('admin.leads') }}"
-                                    class="{{ request()->is('admin/valuation/all-leads') ? 'active' : '' }}">View All
-                                    Leads</a></li>
-                            <li><a class="{{ request()->is('admin/valuation/show-archive-leads') ? 'active' : '' }}" href="{{route('admin.getArchiveLeads')}}">All Archive Leads</a></li>
+                            style="display: {{ request()->is('admin/category*') ? 'block' : 'none' }}">
+                            <li><a href="{{route('admin.categoryView')}}"
+                                    class="{{ request()->is('admin/category/categories') ? 'active' : '' }}">Category</a></li>
+                            <li><a class="{{ request()->is('admin/category/add-new-sub-category') ? 'active' : '' }}" href="{{route('admin.addSubCategoryView')}}">Sub Category</a></li>
+                            <li><a class="{{ request()->is('admin/category/add-new child-sub-category') ? 'active' : '' }}" href="{{route('admin.addChildCategoryView')}}">Child Sub Category</a></li>
                         </ul>
                     </li>
 
@@ -131,10 +131,10 @@
                         </a>
                         <ul class="submenu"
                             style="display: {{ request()->is('admin/employee*') ? 'block' : 'none' }}">
-                            <li><a href="{{ route('admin.addEmployee') }}"
+                            <li><a href="#"
                                     class="{{ request()->is('admin/employee/add-new-employee') ? 'active' : '' }}">Add
                                     New Employee</a></li>
-                            <li><a href="{{route('admin.listAllEmployee')}}" class="{{ request()->is('admin/employee/employee-list') ? 'active' : '' }}">All Employees</a></li>
+                            <li><a href="#" class="{{ request()->is('admin/employee/employee-list') ? 'active' : '' }}">All Employees</a></li>
                         </ul>
                     </li>
 
@@ -152,23 +152,6 @@
                     </li>
 
                 </ul>
-            @else
-                <ul id="accordion-menu">
-                    <li>
-                        <div class="dropdown-divider"></div>
-                    </li>
-                    <li>
-                        <a href="#" class="dropdown-toggle no-arrow">
-                            <span class="micon dw dw-house-1"></span><span class="mtext">Home</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <div class="dropdown-divider"></div>
-                    </li>
-
-                </ul>
-            @endif
 
         </div>
     </div>

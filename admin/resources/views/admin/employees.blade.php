@@ -20,7 +20,7 @@
                     </div>
                     <nav aria-label="breadcrumb" role="navigation">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{ route('admin.home') }}">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">All Employees</li>
                         </ol>
                     </nav>
@@ -40,7 +40,7 @@
                 @include('notification')
 
                 <div class="card-box mb-30">
-                    <a href="{{ route('admin.addEmployee') }}" class="float-right btn btn-success btn-sm my-3 mx-2"><i
+                    <a href="#" class="float-right btn btn-success btn-sm my-3 mx-2"><i
                             class="dw dw-add-user"></i> Add New Employee</a>
                     <div class="pt-20 pb-20 table-responsive">
                         <table class="checkbox-datatable table nowrap" id="employeesTable">
@@ -96,14 +96,14 @@
                                                     <a class="dropdown-item" href="#"><i class="dw dw-eye"></i>
                                                         View</a>
                                                     <a class="dropdown-item"
-                                                        href="{{ route('admin.empEdit', $row->id) }}"><i
+                                                        href="#}"><i
                                                             class="dw dw-edit2"></i>
                                                         Edit</a>
                                                     <a class="dropdown-item" href="javascript:void(0)"
                                                         onclick="changePassword({{ $row->id }})"><i
                                                             class="dw dw-password"></i>
                                                         Change Password</a>
-                                                    <form action="{{ route('admin.empDelete', $row->id) }}"
+                                                    <form action="#"
                                                         id="empDelete{{ $row->id }}" method="get">
                                                         <a class="dropdown-item empDelete" data-id="{{ $row->id }}"
                                                             href="javascript:void(0)"><i class="dw dw-delete-3"></i>
@@ -176,7 +176,7 @@
                         if (result.isConfirmed) {
                             $.ajax({
                                 type: "post",
-                                url: "{{ route('admin.employeeStatus') }}",
+                                url: "",
                                 data: {
                                     "empId": empId
                                 },

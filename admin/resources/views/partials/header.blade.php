@@ -114,7 +114,7 @@
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
                     @if (auth()->user()->is_admin == 1)
 
-                    <a class="dropdown-item" href="{{route('admin.profile')}}"><i class="dw dw-user1"></i> Profile</a>
+                    <a class="dropdown-item" href="#"><i class="dw dw-user1"></i> Profile</a>
                     @else
                     <a class="dropdown-item" href="#"><i class="dw dw-user1"></i> Profile</a>
 

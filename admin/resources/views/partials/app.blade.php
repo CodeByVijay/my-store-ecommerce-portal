@@ -5,7 +5,7 @@
     <!-- Basic Page Info -->
     <meta charset="utf-8">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
-    <title>Sell Car CRM - @yield('title')</title>
+    <title>My Store Admin - @yield('title')</title>
 
     <!-- Site favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('admin/vendors/images/apple-touch-icon.png') }}">
@@ -27,6 +27,7 @@
         href="{{ asset('admin/src/plugins/datatables/css/responsive.bootstrap4.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('admin/vendors/styles/style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 
     <style>
@@ -127,7 +128,6 @@
 
     <script src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.2/js/dataTables.bootstrap5.min.js"></script>
-
 
 
     <script script type="text/javascript">
